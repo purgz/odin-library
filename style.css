@@ -1,0 +1,124 @@
+:root{
+    --header-col:#fffbfb;
+    --main-col:#f0eef1;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    padding-left: 25px;
+    position: relative;
+    width: 100%;
+    background: var(--header-col);
+    box-shadow: 0 1px 15px 1px grey;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    background-color: var(--main-col);
+}
+#github-icon{
+    width: 24px;
+    transition: ease-in-out 0.5s;
+}
+#github-icon:hover{
+    transform: rotate(360deg);
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-col);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.add-book-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.book-modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+
+.book-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 5px;
+}
+.book-form input{
+    background-color: var(--main-col);
+    border-radius: 5px;
+    height: 40px;
+}
+#read-label{
+    display: flex;
+    align-items: center;
+}
+#legend{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    width: 150px;
+    height: 60px;
+    background-color: silver ;
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+button:hover{
+    transform: scale(1.1);
+}

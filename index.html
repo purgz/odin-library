@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Odin Library</h1>
+    </div>
+
+    <div class="main">
+        <button class="add-book">New Book</button>
+
+        <div class="add-book-modal noselect">
+            <div class="book-modal-content">
+                <form class="book-form">
+                    <legend id = "legend">New Book</legend>
+                    <label for="bookName">Book Name</label>
+                    <input name = "bookName" type="text" placeholder = "Book Name" id = "bookName">
+
+                    <label for="author">Author</label>
+                    <input name = "author" type="text" placeholder = "Author" id = "author">
+
+                    <label for="numPages">Number of Pages</label>
+                    <input name = "numPages" type="number" placeholder = "Number of Pages" id = "numPages">
+
+                    <label id = "read-label" for="read">Have you read? <input type="checkbox" name="read" id = "read" ></label>
+                    
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        Henry Brooks - The Odin Project
+        <a href="https://github.com/purgz/odin-library">
+            <img id = "github-icon" src="images/iconmonstr-github-1.svg" alt="github-icon">
+        </a>
+       
+    </div>
+    
+    <script src = "script.js"></script>
+</body>
+</html>
