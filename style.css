@@ -46,7 +46,8 @@ body{
     width: 100%;
     background-color: var(--main-col);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
@@ -108,7 +109,7 @@ body{
     font-size: 24px;
 }
 
-button{
+.add-book{
     border-radius: 10px;
     font-size: 24px;
     font-weight: bold;
@@ -119,6 +120,54 @@ button{
     color: white;
     transition: ease-in-out 0.2s;
 }
-button:hover{
+.add-book:hover{
     transform: scale(1.1);
+}
+
+.card-wrapper{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 15px;
+    overflow: auto;
+}
+
+.card{
+    background-color: var(--header-col);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card .title{
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.read{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#EE4B2B; 
+}
+
+.remove,
+.read{
+    border: 2px solid rgba(0,0,0,0.5);
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.hasRead{
+    background-color: #50c878;
 }
