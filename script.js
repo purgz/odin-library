@@ -24,10 +24,9 @@ class Book {
     }
 
     draw(){
-        //create card for the book
+        //create dom elements
         let card = document.createElement("div");
         card.classList.add("card");
-
         let title = document.createElement("div");
         let author = document.createElement("div");
         let numPages = document.createElement("div");
@@ -38,10 +37,10 @@ class Book {
         author.classList.add("author");
         numPages.classList.add("num-pages");
         read.classList.add("read");
+        //if the item is flagged as red change bgcolor
         if (this.read){
             read.classList.add("hasRead");
         }
-
         remove.classList.add("remove");
 
         title.textContent = this.name;
@@ -54,6 +53,7 @@ class Book {
             read.textContent = "not read";
         }
 
+        //give buttons functionality
         read.addEventListener("click",()=>{
             console.log(this)
             this.toggleRead();
@@ -68,11 +68,13 @@ class Book {
         card.appendChild(read);
         card.appendChild(remove);
 
+        //make card an attribute to alter in methods
         this.card = card;
         cardWrapper.appendChild(this.card);
     }
 
     toggleRead(){
+        //get the read dom element and toggle read
         let read = this.card.childNodes[3]
         if(!read.classList.toggle("hasRead")){
             read.textContent = "not read";
@@ -84,6 +86,7 @@ class Book {
     }
 
     remove(){
+        //remove item given
         let index = myLibary.indexOf(this);
         myLibary.splice(index,1);
         drawBooks();
